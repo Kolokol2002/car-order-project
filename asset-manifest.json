@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/car-order/static/css/main.031e37c5.css",
+    "main.js": "/car-order/static/js/main.ff490455.js",
+    "static/js/983.1faac478.chunk.js": "/car-order/static/js/983.1faac478.chunk.js",
+    "static/js/440.b24ae56e.chunk.js": "/car-order/static/js/440.b24ae56e.chunk.js",
+    "static/js/697.dfa3a382.chunk.js": "/car-order/static/js/697.dfa3a382.chunk.js",
+    "static/js/807.8bce5426.chunk.js": "/car-order/static/js/807.8bce5426.chunk.js",
+    "index.html": "/car-order/index.html",
+    "static/media/icons.svg": "/car-order/static/media/icons.c96dca4dd346d2c08af47101eb0f4b12.svg",
+    "main.031e37c5.css.map": "/car-order/static/css/main.031e37c5.css.map",
+    "main.ff490455.js.map": "/car-order/static/js/main.ff490455.js.map",
+    "983.1faac478.chunk.js.map": "/car-order/static/js/983.1faac478.chunk.js.map",
+    "440.b24ae56e.chunk.js.map": "/car-order/static/js/440.b24ae56e.chunk.js.map",
+    "697.dfa3a382.chunk.js.map": "/car-order/static/js/697.dfa3a382.chunk.js.map",
+    "807.8bce5426.chunk.js.map": "/car-order/static/js/807.8bce5426.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.031e37c5.css",
+    "static/js/main.ff490455.js"
+  ]
+}

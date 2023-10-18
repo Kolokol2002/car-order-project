@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcar_order=self.webpackChunkcar_order||[]).push([[697],{697:function(r,e,a){a.r(e);a(791);var c=a(329);e.default=function(){return(0,c.jsx)("div",{children:"FavoritesPage"})}}}]);
+//# sourceMappingURL=697.dfa3a382.chunk.js.map
