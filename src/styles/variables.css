@@ -1,0 +1,19 @@
+:root {
+  /* main */
+  --brand-color: #3470ff;
+  --main-color-bg: #ffffff;
+  --main-color-text: #121417;
+  --second-color-text: #12141780;
+
+  /* button */
+  --hover-color-bg: #0b44cd;
+  --button-color-text: #fff;
+
+  /* filters */
+  --filters-field-color-text: #8a8a89;
+  --filters-choose-color-text: #12141733;
+  --filters-hover-choose-color-text: #121417;
+
+  /* modal details car */
+  --rental-text-color: #363535;
+}
