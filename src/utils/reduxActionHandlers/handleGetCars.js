@@ -10,3 +10,9 @@ export const handleCarsFulfilled = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
 };
+
+export const handleCarsMoreFulfilled = (state, { payload }) => {
+  state.cars.push(...payload);
+  state.isLoading = false;
+  state.error = null;
+};
