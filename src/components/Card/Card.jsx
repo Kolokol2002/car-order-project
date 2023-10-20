@@ -49,16 +49,20 @@ const Card = ({ data }) => {
   //   rentalConditions,
   //   mileage,
   // } = data;
-  const formatYear = year => {
-    const res = year.split('-')[0];
+  // const formatYear = year => {
+  //   const res = year.split('-')[0];
+  //   return res;
+  // };
+
+  // const formatCost = cost => {
+  //   const res = cost.split('.')[0];
+  //   return res;
+  // }
+
+  const formatAddress = year => {
+    const res = year.split(',').slice(-2).join(', ');
     return res;
   };
-
-  const formatCost = cost => {
-    const res = cost.split('.')[0];
-    return res;
-  };
-
   const onFavoriteAdd = data => {
     dispatch(pushFavoriteCard(data));
   };
@@ -99,12 +103,27 @@ const Card = ({ data }) => {
       <CardTitle>
         <Make>{data?.make}</Make>
         <Model>{` ${addDotText(9, data?.model, data?.make)}, `}</Model>
-        <Year>{formatYear(data?.year)}</Year>
-        <Cost>{`$${formatCost(data?.rentalPrice)}`}</Cost>
+        <Year>{data?.year}</Year>
+        <Cost>{`${data?.rentalPrice}`}</Cost>
       </CardTitle>
       <List>
         <Item>
-          <ItemText></ItemText>
+          <ItemText>{formatAddress(data?.address)}</ItemText>
+        </Item>
+        <Item>
+          <ItemText>{data?.rentalCompany}</ItemText>
+        </Item>
+        <Item>
+          <ItemText>{`${data?.type} premium`}</ItemText>
+        </Item>
+        <Item>
+          <ItemText>{data?.model}</ItemText>
+        </Item>
+        <Item>
+          <ItemText>{data?.mileage}</ItemText>
+        </Item>
+        <Item>
+          <ItemText>{data?.functionalities[0]}</ItemText>
         </Item>
       </List>
       <CardButton>

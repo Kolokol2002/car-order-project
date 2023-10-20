@@ -54,11 +54,19 @@ export const Cost = styled.span`
 
 export const List = styled.ul`
   margin-bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
 `;
 
 export const Item = styled.li``;
 
-export const ItemText = styled.span``;
+export const ItemText = styled.span`
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--second-color-text);
+`;
 
 export const CardButton = styled.button`
   width: 100%;
