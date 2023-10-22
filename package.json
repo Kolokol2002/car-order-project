@@ -1,8 +1,8 @@
 {
-  "name": "car-order",
+  "name": "car-order-project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kolokol2002.github.io/car-order/",
+  "homepage": "https://Kolokol2002.github.io/car-order-project/",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@reduxjs/toolkit": "^1.9.6",
