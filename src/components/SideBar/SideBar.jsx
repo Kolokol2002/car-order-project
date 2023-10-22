@@ -1,0 +1,34 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import {
+  LinkContainer,
+  LinkStyled,
+  Links,
+  SidebarStyled,
+} from './SideBar.styled';
+import sprite from '../../assets/images/icons/icons.svg';
+
+const SideBar = ({ onToggleSidbar }) => {
+  return (
+    <SidebarStyled>
+      <button onClick={onToggleSidbar}>
+        <svg>
+          <use xlinkHref={`${sprite}#icon-close`} />
+        </svg>
+      </button>
+      <Links onClick={onToggleSidbar}>
+        <LinkContainer>
+          <LinkStyled to={'/'}>Home</LinkStyled>
+        </LinkContainer>
+        <LinkContainer>
+          <LinkStyled to={'/catalog'}>Catalog</LinkStyled>
+        </LinkContainer>
+        <LinkContainer>
+          <LinkStyled to={'/favorites'}>Favorites</LinkStyled>
+        </LinkContainer>
+      </Links>
+    </SidebarStyled>
+  );
+};
+
+export default SideBar;
