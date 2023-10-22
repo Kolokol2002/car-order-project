@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/car-order/static/css/main.031e37c5.css",
-    "main.js": "/car-order/static/js/main.ff490455.js",
-    "static/js/983.1faac478.chunk.js": "/car-order/static/js/983.1faac478.chunk.js",
-    "static/js/440.b24ae56e.chunk.js": "/car-order/static/js/440.b24ae56e.chunk.js",
-    "static/js/697.dfa3a382.chunk.js": "/car-order/static/js/697.dfa3a382.chunk.js",
-    "static/js/807.8bce5426.chunk.js": "/car-order/static/js/807.8bce5426.chunk.js",
-    "index.html": "/car-order/index.html",
-    "static/media/icons.svg": "/car-order/static/media/icons.c96dca4dd346d2c08af47101eb0f4b12.svg",
-    "main.031e37c5.css.map": "/car-order/static/css/main.031e37c5.css.map",
-    "main.ff490455.js.map": "/car-order/static/js/main.ff490455.js.map",
-    "983.1faac478.chunk.js.map": "/car-order/static/js/983.1faac478.chunk.js.map",
-    "440.b24ae56e.chunk.js.map": "/car-order/static/js/440.b24ae56e.chunk.js.map",
-    "697.dfa3a382.chunk.js.map": "/car-order/static/js/697.dfa3a382.chunk.js.map",
-    "807.8bce5426.chunk.js.map": "/car-order/static/js/807.8bce5426.chunk.js.map"
+    "main.css": "/car-order-project/static/css/main.3f55fdb3.css",
+    "main.js": "/car-order-project/static/js/main.6363b706.js",
+    "static/js/586.7d99984b.chunk.js": "/car-order-project/static/js/586.7d99984b.chunk.js",
+    "static/js/932.7e09c6db.chunk.js": "/car-order-project/static/js/932.7e09c6db.chunk.js",
+    "static/js/954.c2ee4fd8.chunk.js": "/car-order-project/static/js/954.c2ee4fd8.chunk.js",
+    "static/js/506.b0b03ba3.chunk.js": "/car-order-project/static/js/506.b0b03ba3.chunk.js",
+    "static/media/car-on-bg.png": "/car-order-project/static/media/car-on-bg.074c48221783e7153fa1.png",
+    "static/media/plug_auto.png": "/car-order-project/static/media/plug_auto.8022bced90a252a1c08e.png",
+    "static/media/bg-home-page.png": "/car-order-project/static/media/bg-home-page.4bb37ad053ceb174c0b5.png",
+    "static/media/icons.svg": "/car-order-project/static/media/icons.9ae7a6c9981e668c3b2743b84c379db8.svg",
+    "index.html": "/car-order-project/index.html",
+    "main.3f55fdb3.css.map": "/car-order-project/static/css/main.3f55fdb3.css.map",
+    "main.6363b706.js.map": "/car-order-project/static/js/main.6363b706.js.map",
+    "586.7d99984b.chunk.js.map": "/car-order-project/static/js/586.7d99984b.chunk.js.map",
+    "932.7e09c6db.chunk.js.map": "/car-order-project/static/js/932.7e09c6db.chunk.js.map",
+    "954.c2ee4fd8.chunk.js.map": "/car-order-project/static/js/954.c2ee4fd8.chunk.js.map",
+    "506.b0b03ba3.chunk.js.map": "/car-order-project/static/js/506.b0b03ba3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.031e37c5.css",
-    "static/js/main.ff490455.js"
+    "static/css/main.3f55fdb3.css",
+    "static/js/main.6363b706.js"
   ]
 }
