@@ -1,6 +1,10 @@
 import { createAction, createSlice } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
-import { getCarsOperation, getMoreCarsOperation } from './operations';
+import {
+  filterGetCarsOperation,
+  getCarsOperation,
+  getMoreCarsOperation,
+} from './operations';
 import storage from 'redux-persist/lib/storage';
 import {
   handleCarsFulfilled,
@@ -36,6 +40,9 @@ const carsSlice = createSlice({
       .addCase(getMoreCarsOperation.pending, handleCarsPending)
       .addCase(getMoreCarsOperation.fulfilled, handleCarsMoreFulfilled)
       .addCase(getMoreCarsOperation.rejected, handleCarsRejected)
+      .addCase(filterGetCarsOperation.pending, handleCarsPending)
+      .addCase(filterGetCarsOperation.fulfilled, handleCarsFulfilled)
+      .addCase(filterGetCarsOperation.rejected, handleCarsRejected)
       .addCase(pushFavoriteCard, (state, action) => {
         state.favorites.push(action.payload);
       })
