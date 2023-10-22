@@ -1,9 +1,10 @@
 import LoadMoreButton from 'components/Buttons/LoadMoreButton/LoadMoreButton';
 import Cards from 'components/Cards/Cards';
+import Filters from 'components/Filters/Filters';
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCarsOperation, getMoreCarsOperation } from 'redux/cars/operations';
-import { selectIsLoading } from 'redux/cars/selectors';
+import { selectCars, selectIsLoading } from 'redux/cars/selectors';
 // import testData from './advertsCars.json';
 // import axios from 'axios';
 
@@ -12,6 +13,7 @@ const CatalogLayout = () => {
   const isLoading = useSelector(selectIsLoading);
   const dispatch = useDispatch();
   const cardsRef = useRef();
+  const carsData = useSelector(selectCars);
   useEffect(() => {
     (async () => {
       page === 1
@@ -39,7 +41,8 @@ const CatalogLayout = () => {
   };
   return (
     <div>
-      <Cards cardsRef={cardsRef} />
+      <Filters />
+      <Cards data={carsData} cardsRef={cardsRef} />
       <LoadMoreButton onLoadMore={onLoadMore} />
     </div>
   );
