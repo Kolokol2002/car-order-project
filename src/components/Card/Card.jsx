@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-  ButtonText,
   CardButton,
   CardStyled,
   CardTitle,
@@ -20,10 +19,13 @@ import sprite from '../../assets/images/icons/icons.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteFavoriteCard, pushFavoriteCard } from 'redux/cars/carsSlice';
 import { selectFavorites } from 'redux/cars/selectors';
-import { json } from 'react-router-dom';
+import plug_auto from '../../assets/images/plug_auto.png';
+import ModalCar from 'components/ModalCar/ModalCar';
+import MainButton from 'components/Buttons/MainButton/MainButton';
 
 const Card = ({ data }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const favoriteCards = useSelector(selectFavorites);
   const dispatch = useDispatch();
 
@@ -66,6 +68,9 @@ const Card = ({ data }) => {
   const onFavoriteAdd = data => {
     dispatch(pushFavoriteCard(data));
   };
+  const onOpenModal = () => {
+    setIsOpenModal(true);
+  };
 
   const onFavoriteDelete = id => {
     dispatch(deleteFavoriteCard(id));
@@ -89,7 +94,7 @@ const Card = ({ data }) => {
   return (
     <CardStyled>
       <ContainerImg>
-        <MainImg src={data?.img} alt="" />
+        <MainImg src={data?.img && plug_auto} alt={data.make} />
         {isFavorite ? (
           <IconFavorite active onClick={() => onFavoriteDelete(data.id)}>
             <use xlinkHref={`${sprite}#icon-active-favorite`}></use>
@@ -114,7 +119,7 @@ const Card = ({ data }) => {
           <ItemText>{data?.rentalCompany}</ItemText>
         </Item>
         <Item>
-          <ItemText>{`${data?.type} premium`}</ItemText>
+          <ItemText>{`${data?.type}`}</ItemText>
         </Item>
         <Item>
           <ItemText>{data?.model}</ItemText>
@@ -127,8 +132,18 @@ const Card = ({ data }) => {
         </Item>
       </List>
       <CardButton>
-        <ButtonText>Learn more</ButtonText>
+        <MainButton onClick={onOpenModal} width={'100%'}>
+          Learn more
+        </MainButton>
       </CardButton>
+      {isOpenModal && (
+        <ModalCar
+          data={data}
+          isOpen={isOpenModal}
+          setIsOpenModal={setIsOpenModal}
+          formatAddress={formatAddress}
+        />
+      )}
     </CardStyled>
   );
 };

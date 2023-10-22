@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 
-export const CardStyled = styled.div``;
+export const CardStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 274px;
+`;
 
 export const ContainerImg = styled.div`
   position: relative;
@@ -15,6 +19,7 @@ export const MainImg = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  background-color: #c5c5c5e6;
 `;
 
 export const IconFavorite = styled.svg`
@@ -62,23 +67,16 @@ export const List = styled.ul`
 export const Item = styled.li``;
 
 export const ItemText = styled.span`
+  display: block;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   color: var(--second-color-text);
+  white-space: nowrap;
 `;
 
-export const CardButton = styled.button`
+export const CardButton = styled.div`
+  display: block;
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  background-color: var(--brand-color);
-`;
-
-export const ButtonText = styled.span`
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  color: var(--button-color-text);
+  margin-top: auto;
 `;

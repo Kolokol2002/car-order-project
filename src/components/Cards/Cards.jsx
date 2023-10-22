@@ -4,11 +4,10 @@ import { useSelector } from 'react-redux';
 import { selectCars } from 'redux/cars/selectors';
 import { CardsContainer } from './Cards.styled';
 
-const Cards = ({ cardsRef }) => {
-  const carsData = useSelector(selectCars);
+const Cards = ({ cardsRef, data }) => {
   return (
     <CardsContainer ref={cardsRef}>
-      {carsData?.map(cars => (
+      {data?.map(cars => (
         <Card key={cars?.id} data={cars} />
       ))}
     </CardsContainer>
