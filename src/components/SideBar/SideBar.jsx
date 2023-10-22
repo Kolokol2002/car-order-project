@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import {
+  ButtonClose,
+  ButtonIcon,
   LinkContainer,
   LinkStyled,
   Links,
@@ -11,11 +12,11 @@ import sprite from '../../assets/images/icons/icons.svg';
 const SideBar = ({ onToggleSidbar }) => {
   return (
     <SidebarStyled>
-      <button onClick={onToggleSidbar}>
-        <svg>
+      <ButtonClose onClick={onToggleSidbar}>
+        <ButtonIcon>
           <use xlinkHref={`${sprite}#icon-close`} />
-        </svg>
-      </button>
+        </ButtonIcon>
+      </ButtonClose>
       <Links onClick={onToggleSidbar}>
         <LinkContainer>
           <LinkStyled to={'/'}>Home</LinkStyled>

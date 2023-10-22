@@ -17,8 +17,8 @@ import { filterGetCarsOperation } from 'redux/cars/operations';
 const initialValues = {
   make: '',
   rentalCost: 0,
-  from: 0,
-  to: 0,
+  from: '',
+  to: '',
 };
 
 const Filters = ({ setFilterPage, setPage }) => {

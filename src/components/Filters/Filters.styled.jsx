@@ -9,12 +9,17 @@ export const FiltersStyled = styled.form`
 `;
 export const SelectContainer = styled.div``;
 export const SelectStyled = styled.select`
-  border: none;
-  padding: 14px 18px;
   border-radius: 14px;
   background-color: #f7f7fb;
+  box-shadow: 0px 4px 36px 0px #00000005;
+  border: 1px solid #1214170d;
+  padding: 14px 18px;
 `;
-export const OptionStyled = styled.option``;
+export const OptionStyled = styled.option`
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--filters-choose-color-text);
+`;
 export const InputContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;

@@ -16,6 +16,7 @@ export const ContentContainer = styled.div`
   justify-content: center;
 `;
 export const MainTitle = styled.h1`
+  max-width: 570px;
   font-size: 47px;
   margin-bottom: 30px;
   color: var(--main-color-text);
@@ -38,10 +39,11 @@ export const BackgroundImage = styled.img`
   display: block;
   margin-left: auto;
   height: 100vh;
+  max-width: auto;
 `;
 export const BackgroundCar = styled.img`
   position: absolute;
-  width: 560px;
-  top: 335px;
+  width: 730px;
+  bottom: 20%;
   right: 20px;
 `;

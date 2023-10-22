@@ -1,3 +1,4 @@
+import BurgerButton from 'components/Buttons/BurgerButton/BurgerButton';
 import SideBar from 'components/SideBar/SideBar';
 import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -10,7 +11,9 @@ const MainLayout = () => {
   };
   return (
     <div>
-      {pathname !== '/' && <button onClick={onToggleSidbar}>☰</button>}
+      {pathname !== '/' && (
+        <BurgerButton onClick={onToggleSidbar}>☰</BurgerButton>
+      )}
       {isOpen && <SideBar onToggleSidbar={onToggleSidbar} />}
       <Outlet />
     </div>

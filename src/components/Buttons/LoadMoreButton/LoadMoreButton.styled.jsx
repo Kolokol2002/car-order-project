@@ -1,6 +1,8 @@
 const { default: styled } = require('@emotion/styled');
 
 export const LoadMoreButtonStyled = styled.button`
+  display: block;
+  margin: 100px auto 0;
   font-size: 16px;
   line-height: 24px;
 

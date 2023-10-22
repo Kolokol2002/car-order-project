@@ -8,7 +8,8 @@ export const SidebarStyled = styled.div`
   z-index: 9999;
   height: 100vh;
   background-color: var(--main-color-bg);
-  padding: 30px;
+  padding: 100px;
+  box-shadow: 10px 0px 41px -5px rgba(0, 0, 0, 0.75);
 `;
 export const Links = styled.ul`
   display: flex;
@@ -27,4 +28,19 @@ export const LinkStyled = styled(NavLink)`
   &:hover {
     color: var(--brand-color);
   }
+`;
+
+export const ButtonClose = styled.button`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+`;
+export const ButtonIcon = styled.svg`
+  width: 20px;
+  height: 20px;
 `;
