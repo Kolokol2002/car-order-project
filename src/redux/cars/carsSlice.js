@@ -11,13 +11,16 @@ import {
   handleCarsMoreFulfilled,
   handleCarsPending,
   handleCarsRejected,
+  handleFilterCarsFulfilled,
 } from 'utils/reduxActionHandlers/handleGetCars';
 export const pushFavoriteCard = createAction('pushFavoriteCard');
 export const deleteFavoriteCard = createAction('deleteFavoriteCard');
+export const filterGetMoreCars = createAction('filterGetMoreCars');
 
 const initialState = {
   cars: [],
-  filters: {},
+  dataCount: 0,
+  filterCar: [],
   favorites: [],
   isLoading: false,
   error: null,
@@ -41,7 +44,7 @@ const carsSlice = createSlice({
       .addCase(getMoreCarsOperation.fulfilled, handleCarsMoreFulfilled)
       .addCase(getMoreCarsOperation.rejected, handleCarsRejected)
       .addCase(filterGetCarsOperation.pending, handleCarsPending)
-      .addCase(filterGetCarsOperation.fulfilled, handleCarsFulfilled)
+      .addCase(filterGetCarsOperation.fulfilled, handleFilterCarsFulfilled)
       .addCase(filterGetCarsOperation.rejected, handleCarsRejected)
       .addCase(pushFavoriteCard, (state, action) => {
         state.favorites.push(action.payload);
@@ -49,6 +52,10 @@ const carsSlice = createSlice({
       .addCase(deleteFavoriteCard, (state, action) => {
         const res = state.favorites.filter(({ id }) => id !== action.payload);
         state.favorites = res;
+      })
+      .addCase(filterGetMoreCars, (state, action) => {
+        const res = state.filterCar.slice(0, 8 * action.payload);
+        state.cars = res;
       }),
 });
 

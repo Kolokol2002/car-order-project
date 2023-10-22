@@ -6,7 +6,6 @@ import { selectFavorites } from 'redux/cars/selectors';
 const FavoritesLayout = () => {
   const cardsRef = useRef();
   const carsFavoriteData = useSelector(selectFavorites);
-  console.log(carsFavoriteData);
   return (
     <div>
       <Cards data={carsFavoriteData} cardsRef={cardsRef} />

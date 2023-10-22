@@ -21,20 +21,9 @@ const initialValues = {
   to: 0,
 };
 
-const Filters = () => {
+const Filters = ({ setFilterPage, setPage }) => {
   const dispatch = useDispatch();
-  const {
-    values,
-    errors,
-    dirty,
-    isSubmitting,
-    resetForm,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    setFieldValue,
-    setFieldTouched,
-  } = useFormik({
+  const { values, errors, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: initialValues,
     enableReinitialize: true,
     onSubmit: onSearch,
@@ -49,7 +38,8 @@ const Filters = () => {
       page: 1,
     };
     dispatch(filterGetCarsOperation(formatData));
-    // console.log(formatData);
+    setFilterPage(1);
+    setPage(1);
   }
   return (
     <FiltersStyled onSubmit={handleSubmit}>

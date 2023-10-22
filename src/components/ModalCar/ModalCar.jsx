@@ -34,7 +34,7 @@ const ModalCar = ({ data, isOpen, setIsOpenModal, formatAddress }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ImageMain src={data?.img && plug_auto} alt={data.make} />
+      <ImageMain src={data?.img ?? plug_auto} alt={data.make} />
       <CardTitle>
         <Make>{data?.make}</Make>
         <Model>{data?.model}</Model>

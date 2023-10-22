@@ -8,7 +8,6 @@ const MainLayout = () => {
   const onToggleSidbar = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true);
   };
-  console.log(pathname);
   return (
     <div>
       {pathname !== '/' && <button onClick={onToggleSidbar}>☰</button>}

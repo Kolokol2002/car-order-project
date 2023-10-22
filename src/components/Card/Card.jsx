@@ -94,7 +94,7 @@ const Card = ({ data }) => {
   return (
     <CardStyled>
       <ContainerImg>
-        <MainImg src={data?.img && plug_auto} alt={data.make} />
+        <MainImg src={data?.img ?? plug_auto} alt={data.make} />
         {isFavorite ? (
           <IconFavorite active onClick={() => onFavoriteDelete(data.id)}>
             <use xlinkHref={`${sprite}#icon-active-favorite`}></use>
